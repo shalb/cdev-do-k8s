@@ -110,4 +110,4 @@ modules:
       region: {{ .variables.region }}
       kubeconfig: {{ $get_kubeconfig_cmd }}
       argocd_url: https://argocd.{{ .variables.domain }}
-      argocd_password: {{ .variables.argo_password }}
+
