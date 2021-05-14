@@ -89,6 +89,7 @@ modules:
       server.ingress.annotations.nginx\.ingress\.kubernetes\.io/backend-protocol: "HTTPS"
       server.config.url: https://argocd.{{ .variables.domain }}
       configs.secret.argocdServerAdminPassword: {{ .variables.argo_password }}
+      configs.secret.argocdServerAdminPasswordMtime: "2021-01-01T00:00:00Z"
       installCRDs: false
   - 
     name: argocd_apps
