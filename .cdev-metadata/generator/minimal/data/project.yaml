@@ -1,0 +1,7 @@
+name: /{ .name }/
+kind: Project
+variables:
+  organization: /{ .organization }/
+  region: /{ .region }/
+  bucket_name: /{ .bucket_name }/
+
