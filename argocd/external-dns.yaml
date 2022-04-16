@@ -3,13 +3,14 @@ kind: Application
 metadata:
   name: external-dns
   namespace: argocd
-  argocd.argoproj.io/sync-wave: "0"
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
 spec:
   project: default
   source:
     repoURL: https://charts.bitnami.com/bitnami
     chart: external-dns
-    targetRevision: 4.4.3
+    targetRevision: 6.1.0
     helm:
       values: |
         rbac:
