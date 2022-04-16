@@ -16,7 +16,7 @@ spec:
           create: "true"
         provider: digitalocean
         digitalocean:
-          apiToken: {{ .secret.prod.do_token }}
+          apiToken: {{ reqEnv "DIGITALOCEAN_TOKEN" }}
         interval: "1m"
         policy: "sync"
         metrics:
