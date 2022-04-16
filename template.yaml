@@ -1,4 +1,3 @@
-{{- $get_kubeconfig_cmd := print "export KUBECONFIG=./kubeconfig && doctl auth init -t"  (reqEnv "DIGITALOCEAN_TOKEN") " && doctl kubernetes cluster kubeconfig save " .name }}
 name: do-k8s
 kind: StackTemplate
 units:

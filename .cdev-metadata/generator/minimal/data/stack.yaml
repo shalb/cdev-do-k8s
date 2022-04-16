@@ -1,6 +1,6 @@
 name: prod_kubernetes
-template: https://github.com/shalb/cdev-do-k8s?ref=v0.0.1
-kind: Infrastructure
+template: https://github.com/shalb/cdev-do-k8s?ref=v0.0.2
+kind: Stack
 backend: do-backend
 variables:
   do_token: {{ reqEnv "DIGITALOCEAN_TOKEN" }}
@@ -15,6 +15,7 @@ variables:
     max_nodes: 2
     auto_scale: true
     node_type: "s-1vcpu-2gb"
-  k8s_version: "1.19"
+  k8s_version: "1.22.8-do"
+  cluster_name: arti-k8s
   domain: /{ .domain }/ # You should create a DNS zone in DigitalOcean domains.
   argo_password: "$2y$12$r474GzwwJ.pskdhS.FAM2uc/OOJL0sHrv6pcdSlm1.sGiQdrhX.Xu" # This bcrypted "password" is for testing only. Make sure to change it! To bcrypt your own password, use this online tool: https://www.browserling.com/tools/bcrypt
